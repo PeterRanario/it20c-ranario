@@ -57,6 +57,51 @@ public class Main {
             list.printList();
         }
 
+        public static void main(String[] args) {
+
+            
+            //Displaying Menu Choices
+            System.out.println("Hello! This is Linkedlist program!");
+            boolean exit = false;
+            while (!exit) {
+                System.out.println();
+                System.out.println("--------------------");
+                System.out.println("1. Add Element");
+                System.out.println("2. Move or Swap Element");
+                System.out.println("3. Display");
+                System.out.println("4. Delete");
+                System.out.println("5. Exit");
+                System.out.println("--------------------");
+                System.out.println();
+            try {
+                System.out.print("Response: ");
+                int choice = sc.nextInt();
+                switch (choice) {
+                    case 1:
+                        adding();
+                        break;
+                    case 2:
+                        move();
+                        break;
+                    case 3:
+                        display();
+                        break;
+                    case 4:
+                        delete();
+                        break;
+                    case 5:
+                        exit = true;
+                        System.out.println("Goodbye! Thanks for using this program.");
+                        break;
+                    default:
+                        System.out.println("Invalid input. Please select a valid option.");
+                }
+            } catch (Exception e) {
+                System.out.println("Error..... invalid input........");
+                break;
+            }
+        }   }
+
 
 
 }
