@@ -1,15 +1,12 @@
-public class Node {
-    //Initializing Variables
-    String data;
-    Node next;
+public class node {
 
-    //Constructor
-    Node(String data) {
-
-        this.data = data;
-        this.next = null;
-
-    }
+     //Initalizing variable data and Node next
+    int data;  
+    Node next;  
     
-    
+    // Constructor
+   Node(int data) {
+       this.data = data;
+       this.next = null;
+   }
 }
