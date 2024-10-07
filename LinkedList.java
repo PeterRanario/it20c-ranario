@@ -64,4 +64,39 @@ public class LinkedList {
         Node nodeToMove = null;
         Node previousOfMovingNode = null;
 
+         // Find the node to move
+        for (int i = 0; currentNode != null && i < oldIndex; i++) {
+            previousOfMovingNode = previousNode;
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        nodeToMove = currentNode;
+
+        if (nodeToMove == null) return;
+
+        // Remove the node from its current position
+        if (previousOfMovingNode != null) {
+            previousOfMovingNode.next = nodeToMove.next;
+        } else {
+            head = nodeToMove.next;
+        }
+
+        // Insert the node at the new position
+        currentNode = head;
+        previousNode = null;
+
+        for (int i = 0; currentNode != null && i < newIndex; i++) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+
+        if (previousNode != null) {
+            nodeToMove.next = currentNode;
+            previousNode.next = nodeToMove;
+        } else {
+            nodeToMove.next = head;
+            head = nodeToMove;
+        }
+
+
 }
