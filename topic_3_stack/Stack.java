@@ -4,5 +4,6 @@ import java.util.Scanner;
 
 class Stack {
 
-    
+
+
 }
