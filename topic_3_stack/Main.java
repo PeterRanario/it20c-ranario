@@ -25,10 +25,19 @@ public class Main {
 
         switch(choice) {
             case 1;
+                System.out.println("Size of stack is: " + stack.size());
+                System.out.println("---------------------------------");
+                break;
 
-            System.out.println("Size of stack is: " + stack.size());
-            System.out.println("---------------------------------");
-            break;
+            case 2;
+                    System.out.println("Add a number: ");
+                    int num = sc.nextint();
+                    System.out.println("Value has been pushed: " + num);
+                    stack.push(num;)
+                    stack.size();
+                    System.out.println(-------------------------------);
+                    break;
+
             
 
         }
