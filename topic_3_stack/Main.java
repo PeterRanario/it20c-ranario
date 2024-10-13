@@ -8,6 +8,10 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        Stack stack = new Stack(5);
+
+       System.out.println("Hello there!");
+       
 
     }
 
