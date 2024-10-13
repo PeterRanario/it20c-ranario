@@ -38,6 +38,12 @@ public class Main {
                     System.out.println(-------------------------------);
                     break;
 
+            case 3;
+                    stack.pop();
+                    System.out.println("Element popped: " + stack.pop());
+                    stack.size();
+                    break;
+
             
 
         }
