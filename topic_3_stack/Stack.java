@@ -29,4 +29,8 @@ class Stack {
         return stackArray[top--];
     }
 
+    public int size() {
+        return top + 1;
+    }
+
 }
