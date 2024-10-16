@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Stack;
 
 public class StackCalculatorGUI extends JFrame implements ActionListener {
+    private Stack<Integer> numberStack = new Stack<>();
+    private JTextArea displayArea;
 
-    
 }
