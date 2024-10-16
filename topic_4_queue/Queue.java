@@ -19,7 +19,7 @@ public class Queue {
 
      public void enqueue(Customer customer) {
         customers.addLast(customer);
-        System.out.println(customer.getName() + " has been added to the queue.");
+        System.out.println(customer.getName() + " is added to the queue.");
     }
 
     public void displayQueue() {
