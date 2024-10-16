@@ -39,7 +39,10 @@ public class Main {
                     System.out.println();
                     System.out.println("Thank you! Enjoy!!.");
                     System.exit(0);
-                    break;  
+                    break;
+                default:
+                    System.out.println();
+                    System.out.println("Invalid input. Please select a valid choice.......");
 
             }
         }
