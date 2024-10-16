@@ -6,7 +6,7 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     Queue customerQueue = new Queue();
 
-    System.out.println("Hello! Good Day Ma'am/Sir!");
+        System.out.println("Hello! Good Day Ma'am/Sir!");
              
         while(true) {
                                
@@ -23,13 +23,24 @@ public class Main {
                     customerQueue.displayQueue();
                     break;
 
-                case 2;
+                case 2:
                     sc.nextLine();
                     System.out.println("Enter new customer: ");
                     String name = sc.nextLine();
                     System.out.println();
                     customerQueue.enqueue(new Customer(name));
                     break;
+
+                case 3:
+                    System.out.println();
+                    customerQueue.dequeue();
+                    break;
+                case 4:
+                    System.out.println();
+                    System.out.println("Thank you! Enjoy!!.");
+                    System.exit(0);
+                    break;  
+
             }
         }
         
