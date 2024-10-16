@@ -125,4 +125,11 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         displayArea.append("Current Stack: " + numberStack + "\n");
     }
 
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            StackCalculatorGUI calculator = new StackCalculatorGUI();
+            calculator.setVisible(true);
+        });
+    }
+
 }
