@@ -68,4 +68,22 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         panel.add(button);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+
+        if ("0123456789".contains(command)) {
+            int number = Integer.parseInt(command);
+            numberStack.push(number);
+            displayCurrentStack();
+        } else if (command.equals("Clear")) {
+            numberStack.clear();
+            displayArea.setText("Stack cleared.\n");
+        } else if (command.equals("Exit")) {
+            System.exit(0);
+        } else {
+            performOperation(command);
+        }
+    }
+
 }
