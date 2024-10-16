@@ -30,6 +30,22 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         displayArea.setForeground(Color.BLACK);
         JScrollPane scrollPane = new JScrollPane(displayArea);
         add(scrollPane, BorderLayout.CENTER);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(5, 4, 10, 10));
+        buttonPanel.setBackground(new Color(255, 255, 255));
+
+        for (int i = 0; i <= 9; i++) {
+            createButton(buttonPanel, String.valueOf(i), new Color(173, 216, 230));
+        }
+
+        String[] operations = {"+", "-", "*", "/"};
+        Color[] opColors = {
+            new Color(135, 206, 250),
+            new Color(255, 99, 71),
+            new Color(144, 238, 144),
+            new Color(255, 215, 0)
+        };
     }
 
 }
