@@ -86,4 +86,39 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         }
     }
 
+    private void performOperation(String operation) {
+        if (numberStack.size() < 2) {
+            displayArea.append("Error: Input at least two numbers to " + operation + ".\n");
+            return;
+        }
+        int secondNumber = numberStack.pop();
+        int firstNumber = numberStack.pop();
+        int result = 0;
+
+        switch (operation) {
+            case "+":
+                result = firstNumber + secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "*":
+                result = firstNumber * secondNumber;
+                break;
+            case "/":
+                if (secondNumber == 0) {
+                    displayArea.append("Error: Cannot divide by zero.\n");
+                    numberStack.push(firstNumber);
+                    numberStack.push(secondNumber);
+                    return;
+                }
+                result = firstNumber / secondNumber;
+                break;
+        }
+
+        numberStack.push(result);
+        displayArea.append("Performed " + operation + ": " + firstNumber + " " + operation + " " + secondNumber + " = " + result + "\n");
+        displayCurrentStack();
+    }
+
 }
