@@ -18,7 +18,18 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         setLayout(new BorderLayout(10, 10));
         setResizable(false);
 
-        
+        JLabel headerLabel = new JLabel("Stack Calculator", SwingConstants.CENTER);
+        headerLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        add(headerLabel, BorderLayout.NORTH);
+
+        displayArea = new JTextArea(5, 20);
+        displayArea.setEditable(false);
+        displayArea.setFont(new Font("Courier New", Font.PLAIN, 16));
+        displayArea.setMargin(new Insets(10, 10, 10, 10));
+        displayArea.setBackground(new Color(240, 248, 255));
+        displayArea.setForeground(Color.BLACK);
+        JScrollPane scrollPane = new JScrollPane(displayArea);
+        add(scrollPane, BorderLayout.CENTER);
     }
 
 }
