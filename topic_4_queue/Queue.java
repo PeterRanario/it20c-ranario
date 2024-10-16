@@ -33,4 +33,15 @@ public class Queue {
             System.out.println();
         }
     }
+
+    public Customer dequeue() {
+        if (!isEmpty()) {
+            Customer customer = customers.removeFirst();
+            System.out.println(customer.getName() + " has been served.");
+            return customer;
+        } else {
+            System.out.println("The queue is empty.");
+            return null;
+        }
+    }
 }
