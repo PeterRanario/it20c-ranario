@@ -16,4 +16,9 @@ public class Queue {
     public int size() {
         return customers.size();
     }
+
+     public void enqueue(Customer customer) {
+        customers.addLast(customer);
+        System.out.println(customer.getName() + " has been added to the queue.");
+    }
 }
