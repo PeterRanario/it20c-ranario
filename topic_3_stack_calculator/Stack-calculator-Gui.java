@@ -121,4 +121,8 @@ public class StackCalculatorGUI extends JFrame implements ActionListener {
         displayCurrentStack();
     }
 
+    private void displayCurrentStack() {
+        displayArea.append("Current Stack: " + numberStack + "\n");
+    }
+
 }
